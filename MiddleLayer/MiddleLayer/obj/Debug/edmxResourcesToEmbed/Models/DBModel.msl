@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RetailModelStoreContainer" CdmEntityContainer="RetailEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="RetailModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="AddLine1" ColumnName="AddLine1" />
+          <ScalarProperty Name="AddLine2" ColumnName="AddLine2" />
+          <ScalarProperty Name="AddLine3" ColumnName="AddLine3" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TinNo" ColumnName="TinNo" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="RetailModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+          <ScalarProperty Name="PRate" ColumnName="PRate" />
+          <ScalarProperty Name="MarginPer" ColumnName="MarginPer" />
+          <ScalarProperty Name="MarginAmount" ColumnName="MarginAmount" />
+          <ScalarProperty Name="SRate" ColumnName="SRate" />
+          <ScalarProperty Name="InitStock" ColumnName="InitStock" />
+          <ScalarProperty Name="MagUnitID" ColumnName="MagUnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeDetails">
+      <EntityTypeMapping TypeName="RetailModel.TypeDetail">
+        <MappingFragment StoreEntitySet="TypeDetail">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

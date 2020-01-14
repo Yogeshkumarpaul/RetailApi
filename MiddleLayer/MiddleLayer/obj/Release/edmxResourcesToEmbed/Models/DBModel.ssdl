@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RetailModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="AddLine1" Type="varchar" MaxLength="100" />
+    <Property Name="AddLine2" Type="varchar" MaxLength="100" />
+    <Property Name="AddLine3" Type="varchar" MaxLength="100" />
+    <Property Name="Phone1" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="TinNo" Type="varchar" MaxLength="50" />
+    <Property Name="WebSite" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" />
+    <Property Name="ProductTypeId" Type="int" />
+    <Property Name="PRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MarginPer" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MarginAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InitStock" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MagUnitID" Type="int" />
+  </EntityType>
+  <EntityType Name="TypeDetail">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeCode" Type="int" />
+    <Property Name="TypeName" Type="varchar" MaxLength="20" />
+    <Property Name="DetailName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="RetailModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeDetail" EntityType="Self.TypeDetail" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

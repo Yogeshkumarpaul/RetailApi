@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RetailModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="AddLine1" Type="varchar" MaxLength="100" />
+          <Property Name="AddLine2" Type="varchar" MaxLength="100" />
+          <Property Name="AddLine3" Type="varchar" MaxLength="100" />
+          <Property Name="Phone1" Type="varchar" MaxLength="20" />
+          <Property Name="Phone2" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="TinNo" Type="varchar" MaxLength="50" />
+          <Property Name="WebSite" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" />
+          <Property Name="ProductTypeId" Type="int" />
+          <Property Name="PRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MarginPer" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MarginAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="InitStock" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MagUnitID" Type="int" />
+        </EntityType>
+        <EntityType Name="TypeDetail">
+          <Key>
+            <PropertyRef Name="TypeId" />
+          </Key>
+          <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeCode" Type="int" />
+          <Property Name="TypeName" Type="varchar" MaxLength="20" />
+          <Property Name="DetailName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="RetailModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeDetail" EntityType="Self.TypeDetail" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RetailModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AddLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AddLine2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AddLine3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TinNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductTypeId" Type="Int32" />
+          <Property Name="PRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MarginPer" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MarginAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="InitStock" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MagUnitID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TypeDetail">
+          <Key>
+            <PropertyRef Name="TypeId" />
+          </Key>
+          <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeCode" Type="Int32" />
+          <Property Name="TypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DetailName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="RetailEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="TypeDetails" EntityType="Self.TypeDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RetailModelStoreContainer" CdmEntityContainer="RetailEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="RetailModel.Account">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="AddLine1" ColumnName="AddLine1" />
+                <ScalarProperty Name="AddLine2" ColumnName="AddLine2" />
+                <ScalarProperty Name="AddLine3" ColumnName="AddLine3" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TinNo" ColumnName="TinNo" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="RetailModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="PRate" ColumnName="PRate" />
+                <ScalarProperty Name="MarginPer" ColumnName="MarginPer" />
+                <ScalarProperty Name="MarginAmount" ColumnName="MarginAmount" />
+                <ScalarProperty Name="SRate" ColumnName="SRate" />
+                <ScalarProperty Name="InitStock" ColumnName="InitStock" />
+                <ScalarProperty Name="MagUnitID" ColumnName="MagUnitID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeDetails">
+            <EntityTypeMapping TypeName="RetailModel.TypeDetail">
+              <MappingFragment StoreEntitySet="TypeDetail">
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+                <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RetailModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddLine2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddLine3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Phone1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TinNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductTypeId" Type="Int32" />
+    <Property Name="PRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MarginPer" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MarginAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="InitStock" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MagUnitID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TypeDetail">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeCode" Type="Int32" />
+    <Property Name="TypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DetailName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="RetailEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="TypeDetails" EntityType="Self.TypeDetail" />
+  </EntityContainer>
+</Schema>
