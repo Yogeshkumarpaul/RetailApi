@@ -14,6 +14,9 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TinNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsSupplier" Type="Boolean" />
+    <Property Name="IsManufacturer" Type="Boolean" />
+    <Property Name="IsCustomer" Type="Boolean" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -28,6 +31,10 @@
     <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="InitStock" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="MagUnitID" Type="Int32" />
+    <Property Name="ColorId" Type="Int32" />
+    <Property Name="ManufacturerId" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="SizeId" Type="Int32" />
   </EntityType>
   <EntityType Name="TypeDetail">
     <Key>

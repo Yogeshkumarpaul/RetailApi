@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RetailModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RetailModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accounts">
           <Key>
             <PropertyRef Name="AccountID" />
@@ -19,6 +19,9 @@
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="TinNo" Type="varchar" MaxLength="50" />
           <Property Name="WebSite" Type="varchar" MaxLength="50" />
+          <Property Name="IsSupplier" Type="bit" />
+          <Property Name="IsManufacturer" Type="bit" />
+          <Property Name="IsCustomer" Type="bit" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -33,6 +36,10 @@
           <Property Name="SRate" Type="decimal" Precision="18" Scale="2" />
           <Property Name="InitStock" Type="decimal" Precision="18" Scale="2" />
           <Property Name="MagUnitID" Type="int" />
+          <Property Name="ColorId" Type="int" />
+          <Property Name="ManufacturerId" Type="int" />
+          <Property Name="SupplierID" Type="int" />
+          <Property Name="SizeId" Type="int" />
         </EntityType>
         <EntityType Name="TypeDetail">
           <Key>
@@ -48,8 +55,7 @@
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeDetail" EntityType="Self.TypeDetail" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RetailModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -67,6 +73,9 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TinNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsSupplier" Type="Boolean" />
+          <Property Name="IsManufacturer" Type="Boolean" />
+          <Property Name="IsCustomer" Type="Boolean" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -81,6 +90,10 @@
           <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="InitStock" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="MagUnitID" Type="Int32" />
+          <Property Name="ColorId" Type="Int32" />
+          <Property Name="ManufacturerId" Type="Int32" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="SizeId" Type="Int32" />
         </EntityType>
         <EntityType Name="TypeDetail">
           <Key>
@@ -105,6 +118,9 @@
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="RetailModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="IsCustomer" ColumnName="IsCustomer" />
+                <ScalarProperty Name="IsManufacturer" ColumnName="IsManufacturer" />
+                <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
                 <ScalarProperty Name="AddLine1" ColumnName="AddLine1" />
@@ -121,6 +137,10 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="RetailModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
+                <ScalarProperty Name="ColorId" ColumnName="ColorId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />

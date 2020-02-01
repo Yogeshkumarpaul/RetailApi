@@ -24,5 +24,8 @@ namespace MiddleLayer.Models
         public string Email { get; set; }
         public string TinNo { get; set; }
         public string WebSite { get; set; }
+        public Nullable<bool> IsSupplier { get; set; }
+        public Nullable<bool> IsManufacturer { get; set; }
+        public Nullable<bool> IsCustomer { get; set; }
     }
 }

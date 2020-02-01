@@ -23,5 +23,9 @@ namespace MiddleLayer.Models
         public Nullable<decimal> SRate { get; set; }
         public Nullable<decimal> InitStock { get; set; }
         public Nullable<int> MagUnitID { get; set; }
+        public Nullable<int> ColorId { get; set; }
+        public Nullable<int> ManufacturerId { get; set; }
+        public Nullable<int> SupplierID { get; set; }
+        public Nullable<int> SizeId { get; set; }
     }
 }
