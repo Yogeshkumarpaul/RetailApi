@@ -4,6 +4,9 @@
     <EntitySetMapping Name="Accounts">
       <EntityTypeMapping TypeName="RetailModel.Account">
         <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="IsCustomer" ColumnName="IsCustomer" />
+          <ScalarProperty Name="IsManufacturer" ColumnName="IsManufacturer" />
+          <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
           <ScalarProperty Name="AccountID" ColumnName="AccountID" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="AddLine1" ColumnName="AddLine1" />
@@ -20,6 +23,10 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="RetailModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
