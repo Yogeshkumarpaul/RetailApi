@@ -15,14 +15,14 @@ namespace MiddleLayer.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Retailebook.com.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "We will be happy to help you!!";
 
             return View();
         }

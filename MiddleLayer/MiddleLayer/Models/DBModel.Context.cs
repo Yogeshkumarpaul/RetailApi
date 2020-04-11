@@ -28,5 +28,6 @@ namespace MiddleLayer.Models
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<TypeDetail> TypeDetails { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
     }
 }

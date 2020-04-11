@@ -40,6 +40,23 @@
           <Property Name="ManufacturerId" Type="int" />
           <Property Name="SupplierID" Type="int" />
           <Property Name="SizeId" Type="int" />
+          <Property Name="SuitableFor" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="SaleID" />
+          </Key>
+          <Property Name="SaleID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dated" Type="datetime" />
+          <Property Name="SaleNo" Type="varchar" MaxLength="25" />
+          <Property Name="CustomerID" Type="varchar" MaxLength="25" />
+          <Property Name="PaymentMethodID" Type="varchar" MaxLength="25" />
+          <Property Name="PaymentRefrenceID" Type="nvarchar" MaxLength="100" />
+          <Property Name="PaidAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountPer" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="TypeDetail">
           <Key>
@@ -53,6 +70,7 @@
         <EntityContainer Name="RetailModelStoreContainer">
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeDetail" EntityType="Self.TypeDetail" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -94,6 +112,7 @@
           <Property Name="ManufacturerId" Type="Int32" />
           <Property Name="SupplierID" Type="Int32" />
           <Property Name="SizeId" Type="Int32" />
+          <Property Name="SuitableFor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="TypeDetail">
           <Key>
@@ -108,7 +127,24 @@
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="TypeDetails" EntityType="Self.TypeDetail" />
+          <EntitySet Name="Sales" EntityType="RetailModel.Sale" />
         </EntityContainer>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="SaleID" />
+          </Key>
+          <Property Name="SaleID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dated" Type="DateTime" Precision="3" />
+          <Property Name="SaleNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PaymentMethodID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PaymentRefrenceID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PaidAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountPer" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="DiscountAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -137,6 +173,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="RetailModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="SuitableFor" ColumnName="SuitableFor" />
                 <ScalarProperty Name="SizeId" ColumnName="SizeId" />
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
@@ -160,6 +197,23 @@
                 <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
                 <ScalarProperty Name="TypeName" ColumnName="TypeName" />
                 <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales">
+            <EntityTypeMapping TypeName="RetailModel.Sale">
+              <MappingFragment StoreEntitySet="Sale">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="DiscountPer" ColumnName="DiscountPer" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+                <ScalarProperty Name="PaymentRefrenceID" ColumnName="PaymentRefrenceID" />
+                <ScalarProperty Name="PaymentMethodID" ColumnName="PaymentMethodID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="SaleID" ColumnName="SaleID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

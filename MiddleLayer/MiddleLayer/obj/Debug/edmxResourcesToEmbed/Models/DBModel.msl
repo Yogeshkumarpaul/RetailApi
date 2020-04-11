@@ -23,6 +23,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="RetailModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="SuitableFor" ColumnName="SuitableFor" />
           <ScalarProperty Name="SizeId" ColumnName="SizeId" />
           <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
           <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
@@ -46,6 +47,23 @@
           <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
           <ScalarProperty Name="TypeName" ColumnName="TypeName" />
           <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="RetailModel.Sale">
+        <MappingFragment StoreEntitySet="Sale">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="DiscountPer" ColumnName="DiscountPer" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="PaymentRefrenceID" ColumnName="PaymentRefrenceID" />
+          <ScalarProperty Name="PaymentMethodID" ColumnName="PaymentMethodID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Dated" ColumnName="Dated" />
+          <ScalarProperty Name="SaleID" ColumnName="SaleID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

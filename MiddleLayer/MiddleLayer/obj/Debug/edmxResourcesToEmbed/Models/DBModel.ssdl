@@ -35,6 +35,23 @@
     <Property Name="ManufacturerId" Type="int" />
     <Property Name="SupplierID" Type="int" />
     <Property Name="SizeId" Type="int" />
+    <Property Name="SuitableFor" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="SaleID" />
+    </Key>
+    <Property Name="SaleID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dated" Type="datetime" />
+    <Property Name="SaleNo" Type="varchar" MaxLength="25" />
+    <Property Name="CustomerID" Type="varchar" MaxLength="25" />
+    <Property Name="PaymentMethodID" Type="varchar" MaxLength="25" />
+    <Property Name="PaymentRefrenceID" Type="nvarchar" MaxLength="100" />
+    <Property Name="PaidAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountPer" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="TypeDetail">
     <Key>
@@ -48,6 +65,7 @@
   <EntityContainer Name="RetailModelStoreContainer">
     <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeDetail" EntityType="Self.TypeDetail" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

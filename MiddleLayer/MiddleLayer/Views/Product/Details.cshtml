@@ -1,0 +1,122 @@
+﻿@model MiddleLayer.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarginPer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarginPer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarginAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarginAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InitStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InitStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagUnitID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagUnitID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManufacturerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManufacturerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SizeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SizeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuitableFor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuitableFor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -27,5 +27,6 @@ namespace MiddleLayer.Models
         public Nullable<int> ManufacturerId { get; set; }
         public Nullable<int> SupplierID { get; set; }
         public Nullable<int> SizeId { get; set; }
+        public string SuitableFor { get; set; }
     }
 }

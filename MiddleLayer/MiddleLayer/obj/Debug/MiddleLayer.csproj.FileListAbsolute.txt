@@ -1,4 +1,3 @@
-F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csprojAssemblyReference.cache
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.dll.config
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.pdb
@@ -86,6 +85,7 @@ F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Net.Http.Formatting.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Web.Http.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Web.Http.WebHost.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csprojAssemblyReference.cache
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csproj.CopyComplete
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.pdb
