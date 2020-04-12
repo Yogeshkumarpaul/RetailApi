@@ -1,3 +1,5 @@
+F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\vbc.exe
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.dll.config
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\MiddleLayer.pdb
@@ -39,13 +41,11 @@ F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Security.Cryptogr
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Security.Cryptography.Primitives.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Text.Encoding.CodePages.dll
-F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Threading.Tasks.Extensions.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.ValueTuple.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Xml.ReaderWriter.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Xml.XmlDocument.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Xml.XPath.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\System.Xml.XPath.XDocument.dll
-F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\vbc.exe
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\vbc.exe.config
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\vbc.rsp
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\roslyn\VBCSCompiler.exe
@@ -85,7 +85,7 @@ F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Net.Http.Formatting.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Web.Http.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\System.Web.Http.WebHost.xml
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csprojAssemblyReference.cache
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csproj.CopyComplete
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.dll
 F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.pdb
+F:\RetailAppData\API\MiddleLayer\MiddleLayer\obj\Debug\MiddleLayer.csprojAssemblyReference.cache

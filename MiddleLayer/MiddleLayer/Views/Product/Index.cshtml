@@ -33,28 +33,13 @@
             @Html.DisplayNameFor(model => model.InitStock)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MagUnitID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ColorId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ManufacturerId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SupplierID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SizeId)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.SuitableFor)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="row-no-gutters">
         <td>
             @Html.DisplayFor(modelItem => item.ProductName)
         </td>
@@ -76,21 +61,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.InitStock)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MagUnitID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ColorId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ManufacturerId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SupplierID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SizeId)
-        </td>
+       
         <td>
             @Html.DisplayFor(modelItem => item.SuitableFor)
         </td>
